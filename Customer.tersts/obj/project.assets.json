@@ -6015,6 +6015,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Customer >= 1.0.0",
+      "FluentValidation >= 11.2.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.1",
@@ -6064,6 +6065,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.2.0, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.11.0, )"
