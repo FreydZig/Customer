@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Customer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Customer.Validators
 {
-    public class CustomerValidator : AbstractValidator<Customer>
+    public class CustomerValidator : AbstractValidator<CCustomer>
     {
         public CustomerValidator()
         {

@@ -19,7 +19,7 @@ namespace Customer.tersts
             List<string> testNotes = new List<string>();
             testNotes.Add("note");
 
-            Customer actualCustomer = new Customer("Ivan", "Denin", customerAddresses, testNotes, "zigmunt.freyd.95@gmail.com", "+12345678901", 0);
+            CCustomer actualCustomer = new CCustomer("Ivan", "Denin", customerAddresses, testNotes, "zigmunt.freyd.95@gmail.com", "+12345678901", 0);
 
             Assert.Equal("Ivan", actualCustomer.FirstName);
             Assert.Equal("Denin", actualCustomer.LastName);
@@ -33,7 +33,7 @@ namespace Customer.tersts
         [Fact]
         public void ShouldNotBeAbleToCreateCustomer()
         {
-            Customer actualCustomer = new Customer("", "", new List<Addres>(), new List<string>(), "ss", "+2", 0);
+            CCustomer actualCustomer = new CCustomer("", "", new List<Addres>(), new List<string>(), "ss", "+2", 0);
 
             var result = _customerValidator.TestValidate(actualCustomer);
             result.ShouldHaveValidationErrorFor(x => x.LastName);
