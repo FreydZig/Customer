@@ -23,5 +23,4 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v3
+    - uses: codecov/codecov-action@v3
